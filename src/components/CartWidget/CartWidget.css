@@ -1,0 +1,13 @@
+.cartStyle{
+    display: flex;
+    flex-direction: row;
+    margin-right: 10px;
+}
+.cartText{
+    margin-top: 12px;
+}
+.cartImage{
+    height: auto;
+    margin-right: 4px;
+}
+

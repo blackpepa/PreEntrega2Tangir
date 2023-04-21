@@ -1,0 +1,10 @@
+.itemStyle{
+    text-align: center;
+}
+
+.spinTarget {
+    left: 50%;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+}
