@@ -20,7 +20,7 @@ export const ItemCount = () => {
 
     return(
         <>
-            <p> Soy un coso: {counter} </p>
+            <p>{counter} </p>
         <div>
             <button onClick={sumar}>➕</button>
             <button onClick={restar}>➖</button>
