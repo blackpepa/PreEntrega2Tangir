@@ -9,9 +9,14 @@ import{
   Navigate,
   Route,
 } from 'react-router-dom';
+import { CartProvider } from './components/context/CartContext';
+import { CartScreen } from './components/CartScreen/CartScreen';
+import {Checkout} from './components/Checkout/Checkout'
 
 function App() {
+  
   return (
+    <CartProvider>
     <div>
       <Router>
         <NavBar />
@@ -19,10 +24,13 @@ function App() {
           <Route path='/' element={<ItemListContainer saludo ="¡Bienvenid@s a Kawaii Store!" />}/>
           <Route path='/productos/:categoryId' element={<ItemListContainer/>}/>
           <Route path='/detail/:itemId' element={<ItemDetailContainer />}/>
-          <Route path='*' element={<Navigate to='/'/>} />
+          <Route path='/cart/' element={<CartScreen />} />
+          <Route path ='/checkout' element={<Checkout />} />
+          <Route path='*' element={<Navigate to='/'/>}/>
         </Routes>
       </Router>
     </div>
+    </CartProvider>
   );
 }
 

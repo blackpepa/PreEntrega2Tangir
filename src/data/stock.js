@@ -6,7 +6,8 @@ export const stock = [
         description: "Lapicera super cute con conejitos de peluche",
         price: 250,
         image: "./../img/lapicera-conejos.jpg",
-        category: "lapiceras"
+        category: "lapiceras",
+        stock: 20
     },
     {
         id: 2,
@@ -14,7 +15,8 @@ export const stock = [
         description: "Super cool lapicera para lxs coffee lovers",
         price: 250,
         image:"./../img/lapicera-cafe.jpg",
-        category:"lapiceras"
+        category:"lapiceras",
+        stock: 20
     },
     {
         id: 3,
@@ -22,7 +24,8 @@ export const stock = [
         description: "Ideales para regalarle a una cat person",
         price: 250,
         image: "./../img/lapicera-gatitos.jpg",
-        category:"lapiceras"
+        category:"lapiceras",
+        stock: 20
     },
     {
         id: 4,
@@ -30,7 +33,8 @@ export const stock = [
         description:"A ningún Panda lover le pueden faltar",
         price: 250,
         image: "./../img/lapicera-pandas.jpg",
-        category:"lapiceras"
+        category:"lapiceras",
+        stock: 20
     },
     {
         id: 5,
@@ -38,7 +42,8 @@ export const stock = [
         description: "Hermoso set de lapiceras bien kawaii",
         price: 1500,
         image: "./../img/lapiceras-unicornio.jpg",
-        category:"lapiceras"
+        category:"lapiceras",
+        stock: 20
     },
     {
         id: 6,
@@ -46,7 +51,8 @@ export const stock = [
         description: "Set de seis lapiceras pastel para decorar todo",
         price: 1300,
         image: "./../img/lapiceras-cute.jpg",
-        category:"lapiceras"
+        category:"lapiceras",
+        stock: 20
     
     },
     {
@@ -55,7 +61,8 @@ export const stock = [
         description: "100% algodón pink y en todos los talles",
         price: 3300,
         image: "./../img/remera-gatitos-rosa.jpg",
-        category:"remeras"
+        category:"remeras",
+        stock: 20
     
     },
     {
@@ -64,7 +71,8 @@ export const stock = [
         description: "100% algodón Blue y en todos los talles",
         price: 3300,
         image: "./../img/remera-gatitos-azul.jpg",
-        category:"remeras"
+        category:"remeras",
+        stock: 20
     
     },
     {
@@ -73,7 +81,8 @@ export const stock = [
         description: "100% algodón White y en todos los talles",
         price: 3300,
         image: "./../img/remera-gatitos-blanca.jpg",
-        category:"remeras"
+        category:"remeras",
+        stock: 20
     
     },
     {
@@ -82,7 +91,8 @@ export const stock = [
         description: "100% algodón Sky blue y en todos los talles",
         price: 3300,
         image: "./../img/remera-gatitos-celeste.jpg",
-        category:"remeras"
+        category:"remeras",
+        stock: 20
     
     },
     {
@@ -91,7 +101,8 @@ export const stock = [
         description: "Un toque de cuteness a tus peinados",
         price: 500,
         image: "./../img/hebillas-hello-kitty.jpg",
-        category:"accesorios"
+        category:"accesorios",
+        stock: 20
     
     },
     {
@@ -100,7 +111,8 @@ export const stock = [
         description: "Delicioso colgante para completar tus outfits",
         price: 900,
         image: "./../img/colgante-helado.jpg",
-        category:"accesorios"
+        category:"accesorios",
+        stock: 20
     
     },
     {
@@ -109,7 +121,8 @@ export const stock = [
         description: "Tus llaves también se merecen amor",
         price: 700,
         image: "./../img/llaveros.jpg",
-        category:"accesorios"
+        category:"accesorios",
+        stock: 20
     
     },
     {
@@ -118,7 +131,8 @@ export const stock = [
         description: "Los Aros Love endulzan tus oídos",
         price: 700,
         image: "./../img/aros-corazon.jpg",
-        category:"accesorios"
+        category:"accesorios",
+        stock: 20
     
     },
 ]
