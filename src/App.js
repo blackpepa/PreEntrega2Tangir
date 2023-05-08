@@ -12,6 +12,8 @@ import{
 import { CartProvider } from './components/context/CartContext';
 import { CartScreen } from './components/CartScreen/CartScreen';
 import {Checkout} from './components/Checkout/Checkout'
+import {Somos} from './components/Somos/Somos'
+
 
 function App() {
   
@@ -24,6 +26,8 @@ function App() {
           <Route path='/' element={<ItemListContainer saludo ="¡Bienvenid@s a Kawaii Store!" />}/>
           <Route path='/productos/:categoryId' element={<ItemListContainer/>}/>
           <Route path='/detail/:itemId' element={<ItemDetailContainer />}/>
+          <Route path='/somos' element={<Somos />}/>
+          <Route path ='/checkout' element={<Checkout />} />
           <Route path='/cart/' element={<CartScreen />} />
           <Route path ='/checkout' element={<Checkout />} />
           <Route path='*' element={<Navigate to='/'/>}/>

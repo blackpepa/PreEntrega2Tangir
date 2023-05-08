@@ -6,7 +6,7 @@ import {Link} from 'react-router-dom'
 import {ItemCount} from './../ItemCount/ItemCount';
 import { CartContext } from '../context/CartContext';
 import Swal from 'sweetalert2';
-
+import './ItemDetail.css'
 
 export const ItemDetail = ({ id, name, title, description, price, image, category, stock }) => {
 
@@ -35,30 +35,30 @@ export const ItemDetail = ({ id, name, title, description, price, image, categor
         addToCart(newItem)
         Swal.fire({
           icon: 'success',
-          title: 'Producto agregado al carrito',
+          title: 'Tu producto fue agregado al carrito',
           showConfirmButton: false,
-          timer: 1200
+          timer: 1000
         })
   }
 
 
 
   return (
-    <div className='item'>
-      <Card style={{ width: '25rem' }}>
+    <div>
+      <Card className='cardBackground' style={{ width: '25rem', margin: 'auto'}} >
         <Card.Img variant="top" src={image} />
-        <Card.Body>
+        <Card.Body >
           <Card.Title>{title}</Card.Title>
           <Card.Title>{description}</Card.Title>
           <Card.Title>${price}</Card.Title>
           <ItemCount max={stock} modify={setCounter} cantidad={counter}/>
-          <Button onClick={sumarAlCarrito}>
+          <Button variant='success' className='m-auto' onClick={sumarAlCarrito}>
             Agregar al carrito</Button>
         </Card.Body>
-        <Link to='/cart' className='btn btn-info'>
+        <Link to='/cart' className='btn btn-warning m-2'>
           Ir al carrito
         </Link>
-        <Button onClick={volverHaciaAtras} className='btn btn-sucess'>Volver atras</Button>
+        <Button variant="outline-info" onClick={volverHaciaAtras} className='m-2'>Ver más productos</Button>
       </Card>
     </div>
   )

@@ -41,7 +41,7 @@ export const Checkout = () => {
     const ordenes = db.collection('ordenes')
     ordenes.add(orden)
     .then((res) => {
-      Swal.fire({
+        Swal.fire({
         icon: 'success',
         title: 'Su compra fue realizada con éxitos',
         text: `Guarde su numero de compra: ${res.id}`,
@@ -72,28 +72,30 @@ export const Checkout = () => {
       <h3>Terminar compra</h3>
       <hr />
 
-      <form onSubmit={handlerSubmit} className='container mt-3'>
+      <form onSubmit={handlerSubmit} className='container mt-5 py-3'>
 
         <div className="form-group">
           <label htmlFor="email">Email</label>
-          <input type="text" className="form-control" onChange={(e) => setEmail(e.target.value)} value={email} />
+          <input type="text" className="form-control" onChange={(e) => setEmail(e.target.value)} value={email} required/>
         </div>
         <div className="form-group">
           <label htmlFor="nombre">Nombre</label>
-          <input type="text" className="form-control" onChange={(e) => setNombre(e.target.value)} value={nombre} />
+          <input type="text" className="form-control" onChange={(e) => setNombre(e.target.value)} value={nombre} required/>
         </div>
         <div className="form-group">
           <label htmlFor="apellido">Apellido</label>
-          <input type="text" className="form-control" onChange={(e) => setApellido(e.target.value)} value={apellido} />
+          <input type="text" className="form-control" onChange={(e) => setApellido(e.target.value)} value={apellido} required/>
         </div>
         <div className="form-group">
           <label htmlFor="telefono">Teléfono</label>
-          <input type="text" className="form-control" onChange={(e) => setTelefono(e.target.value)} value={telefono} />
+          <input type="text" className="form-control" onChange={(e) => setTelefono(e.target.value)} value={telefono} required/>
         </div>
-        <button type='submit' className='btn btn-success'>Finalizar compra</button>
-        <Link to='/cart' className='btn btn-info'>Volver al carrito</Link>
+        <Link to='/cart' className='btn btn-outline-info my-3'>Volver al carrito</Link>
+        <button type='submit' className='btn btn-success my-3'>Finalizar compra</button>
+
       </form>
 
     </div>
+
   )
   }

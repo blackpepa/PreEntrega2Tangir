@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
 import './CartWidget.css'
-import Cart from './cart.svg'
+//import Cart from './cart.svg'
 import { CartContext } from '../context/CartContext';
-//import {FaShoppingCart, IconName} from 'react-icons/fa'
-
+import Badge from 'react-bootstrap/Badge';
+import {HiOutlineShoppingCart, IconName} from 'react-icons/hi'
 
 export const CartWidget = () => {
 
@@ -11,8 +11,8 @@ export const CartWidget = () => {
 
   return (
     <div className='cartStyle'>
-      <img src={Cart} alt="carrito" className='cartImage'/>
-      <span>{calcularCantidad()}</span>
+      <HiOutlineShoppingCart className='cartIcon'/>
+      <span><Badge pill bg="warning" text="dark">{calcularCantidad()}</Badge></span>
     </div>
   )
 }

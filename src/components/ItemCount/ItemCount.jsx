@@ -1,4 +1,6 @@
 import React from 'react'
+import {TiPlusOutline, TiMinusOutline} from 'react-icons/ti'
+import "./ItemCount.css";
 
 export const ItemCount = ({max, cantidad, modify}) => {
 
@@ -16,10 +18,16 @@ export const ItemCount = ({max, cantidad, modify}) => {
 
     return(
         <>
-            <p>{cantidad} </p>
+        <div className='addStyle'>
         <div>
-            <button onClick={sumar}>➕</button>
-            <button onClick={restar}>➖</button>
+            <button onClick={restar}><TiMinusOutline/></button>
+        </div>
+        <div>
+            <h4> {cantidad} </h4>
+        </div>
+        <div>
+            <button onClick={sumar}><TiPlusOutline/></button>
+        </div>
         </div>
         </>
     )

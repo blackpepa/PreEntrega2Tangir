@@ -1,13 +1,12 @@
 .cartStyle{
     display: flex;
     flex-direction: row;
+    justify-content: start;
     margin-right: 10px;
 }
-.cartText{
-    margin-top: 12px;
-}
-.cartImage{
-    height: auto;
-    margin-right: 4px;
+
+.cartIcon{
+    color: black;
+    font-size: 1.5rem;
 }
 

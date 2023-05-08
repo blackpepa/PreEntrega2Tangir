@@ -24,7 +24,7 @@ export function NavBar() {
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
                   <Nav.Link as={Link} to="/">Inicio</Nav.Link>
-                  <Nav.Link href="#action2">Somos Kawaii</Nav.Link>
+                  <Nav.Link href="/somos">Somos Kawaii</Nav.Link>
                   <NavDropdown
                     title="Productos"
                     id={`offcanvasNavbarDropdown-expand-${expand}`}
@@ -37,7 +37,6 @@ export function NavBar() {
                       Lapiceras
                     </NavDropdown.Item>
                   </NavDropdown>
-                  <Nav.Link href="#">Mi cuenta</Nav.Link>
                 </Nav>
               </Offcanvas.Body>
             </Navbar.Offcanvas>
