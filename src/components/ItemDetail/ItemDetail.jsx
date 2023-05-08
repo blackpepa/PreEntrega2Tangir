@@ -45,7 +45,7 @@ export const ItemDetail = ({ id, name, title, description, price, image, categor
 
   return (
     <div>
-      <Card className='cardBackground' style={{ width: '25rem', margin: 'auto'}} >
+      <Card style={{ width: '25rem', margin: 'auto', background: '#E5E0FF'}} >
         <Card.Img variant="top" src={image} />
         <Card.Body >
           <Card.Title>{title}</Card.Title>

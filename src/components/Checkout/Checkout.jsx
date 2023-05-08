@@ -11,6 +11,7 @@ export const Checkout = () => {
   const{carrito, precioTotal, vaciarCarrito} = useContext(CartContext)
 
   const [email, setEmail] =useState("")
+  const [emailConfirmar, setEmailConfirmar] =useState("")
   const [nombre, setNombre] = useState("")
   const [apellido, setApellido] = useState("")
   const [telefono, setTelefono] = useState ("")
@@ -22,11 +23,10 @@ export const Checkout = () => {
     console.log("Nombre:", nombre)
     console.log("Apellido", apellido)
     console.log ("Teléfono:", telefono)
+    
+  if(email === emailConfirmar){
 
-
-
-
-  const orden = {
+    const orden = {
     buyer:{
       email,
       nombre,
@@ -65,7 +65,13 @@ export const Checkout = () => {
         })
     })
   }
-
+  else{
+    Swal.fire({
+      icon: 'error',
+      title: 'Revisá que el email coincida',
+    })
+  }
+}
   return (
     <div>
 
@@ -76,7 +82,11 @@ export const Checkout = () => {
 
         <div className="form-group">
           <label htmlFor="email">Email</label>
-          <input type="text" className="form-control" onChange={(e) => setEmail(e.target.value)} value={email} required/>
+          <input type="email" className="form-control" onChange={(e) => setEmail(e.target.value)} value={email} required/>
+        </div>
+        <div className="form-group">
+          <label htmlFor="emailConfirnar">Confirmar Email</label>
+          <input type="email" className="form-control" onChange={(e) => setEmailConfirmar(e.target.value)} value={emailConfirmar} required/>
         </div>
         <div className="form-group">
           <label htmlFor="nombre">Nombre</label>
