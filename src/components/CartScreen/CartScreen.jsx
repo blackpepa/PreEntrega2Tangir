@@ -15,9 +15,9 @@ export const CartScreen = () => {
       {
         carrito.length === 0
           ? <>
-            <h3>Carrito vacio</h3>
+            <h3>Carrito vacío</h3>
             <hr />
-            <Link to='/' className='btn btn-success'> Volver a comprar</Link>
+            <Link to='/' className='btn btn-success m-auto'> Volver al listado</Link>
           </>:
           <>
             <h3>Resumen de compras</h3>
@@ -25,10 +25,10 @@ export const CartScreen = () => {
             {
               carrito.map((prod) => (
                 <>
-                  <div className='listado'>
+                  <div>
                     <p>Producto: {prod.description}</p>
-                    <p>${prod.price}</p>
-                    <p>cantidad: {prod.counter}</p>
+                    <p>Precio: ${prod.price}</p>
+                    <p>Cantidad: {prod.counter}</p>
                   </div>
                   <Button onClick={() => removerItem(prod.id)}>
                     <BsTrash3/>
@@ -39,8 +39,8 @@ export const CartScreen = () => {
             <hr />
             <strong>Precio total: ${precioTotal()}</strong>
             <hr />
-            <Button className='btn btn-danger' onClick={vaciarCarrito}> Vaciar Carrito </Button>
-            <Link to= '/checkout'className='btn btn-success'> 
+            <Button variant='outline-danger'className='my-3' onClick={vaciarCarrito}> Vaciar Carrito </Button>
+            <Link to= '/checkout'className='btn btn-success m-3'> 
             Finalizar compra
             </Link>
           </>

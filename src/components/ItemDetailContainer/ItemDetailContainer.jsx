@@ -52,8 +52,8 @@ export const ItemDetailContainer = () => {
             colors={['#FDF4F5', '#E8A0BF', '#BA90C6', '#C0DBEA', '#CAF7E3']}
           />
             :<ItemDetail {...item}/>
+
         }
-      
     </section>
   )
 }

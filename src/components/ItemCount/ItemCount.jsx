@@ -6,7 +6,7 @@ export const ItemCount = ({max, cantidad, modify}) => {
 
 
     const sumar = () =>{
-        if(cantidad  <max){
+        if(cantidad < max){
         modify(cantidad +1)
         }
     }

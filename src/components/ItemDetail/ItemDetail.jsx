@@ -6,7 +6,6 @@ import {Link} from 'react-router-dom'
 import {ItemCount} from './../ItemCount/ItemCount';
 import { CartContext } from '../context/CartContext';
 import Swal from 'sweetalert2';
-import './ItemDetail.css'
 
 export const ItemDetail = ({ id, name, title, description, price, image, category, stock }) => {
 
@@ -31,6 +30,7 @@ export const ItemDetail = ({ id, name, title, description, price, image, categor
           category,
           counter
         }
+        if(counter>0){
         console.log(newItem)
         addToCart(newItem)
         Swal.fire({
@@ -39,22 +39,29 @@ export const ItemDetail = ({ id, name, title, description, price, image, categor
           showConfirmButton: false,
           timer: 1000
         })
+      }else{
+        Swal.fire({
+          icon: 'error',
+          title: 'Debés agregar al menos un producto',
+        })
+      }
   }
 
 
 
   return (
     <div>
-      <Card style={{ width: '25rem', margin: 'auto', background: '#E5E0FF'}} >
+      <Card style={{ width: '25rem', margin: 'auto', background: '#CDF0EA'}} >
         <Card.Img variant="top" src={image} />
-        <Card.Body >
-          <Card.Title>{title}</Card.Title>
-          <Card.Title>{description}</Card.Title>
-          <Card.Title>${price}</Card.Title>
+        <Card.Body variant='m-2'>
+          <Card.Title><h4>{title}</h4></Card.Title>
+          <Card.Text><p>{description}</p></Card.Text>
+          <Card.Text><h5>Precio: ${price}</h5></Card.Text>
           <ItemCount max={stock} modify={setCounter} cantidad={counter}/>
-          <Button variant='success' className='m-auto' onClick={sumarAlCarrito}>
-            Agregar al carrito</Button>
+
         </Card.Body>
+        <Button className='mx-auto mb-2' variant='success' onClick={sumarAlCarrito}>
+            Agregar al carrito</Button>
         <Link to='/cart' className='btn btn-warning m-2'>
           Ir al carrito
         </Link>

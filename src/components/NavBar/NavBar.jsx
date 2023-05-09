@@ -15,7 +15,7 @@ export function NavBar() {
         <Navbar key={expand} expand={expand} className="mb-3 navColor">
           <Container fluid>
             <Navbar.Brand as={Link} to="/">Kawaii Store</Navbar.Brand>
-            <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
+            <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`}/>
             <Navbar.Offcanvas
               id={`offcanvasNavbar-expand-${expand}`}
               aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
@@ -24,12 +24,12 @@ export function NavBar() {
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
                   <Nav.Link as={Link} to="/">Inicio</Nav.Link>
-                  <Nav.Link href="/somos">Somos Kawaii</Nav.Link>
+                  <Nav.Link as={Link} to="/somos">Somos Kawaii</Nav.Link>
                   <NavDropdown
                     title="Productos"
                     id={`offcanvasNavbarDropdown-expand-${expand}`}
                   >
-                    <NavDropdown.Item as={Link} to="/productos/remeras">Remeras</NavDropdown.Item>
+                    <NavDropdown.Item as={Link} to="/productos/remeras" >Remeras</NavDropdown.Item>
                     <NavDropdown.Item as={Link} to="/productos/accesorios">
                     Accesorios
                     </NavDropdown.Item>

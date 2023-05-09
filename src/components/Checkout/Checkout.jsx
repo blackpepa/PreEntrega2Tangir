@@ -5,6 +5,9 @@ import { getFirestore } from '../../firebase/config'
 import firebase from 'firebase'
 import 'firebase/firestore'
 import Swal from 'sweetalert2'
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col  from 'react-bootstrap/Col'
 
 export const Checkout = () => {
 
@@ -73,10 +76,28 @@ export const Checkout = () => {
   }
 }
   return (
-    <div>
-
-      <h3>Terminar compra</h3>
-      <hr />
+    <Container fluid>
+      <Row>
+        <Col>
+        <h3>Resumen de compra</h3>
+            <hr />
+            {
+              carrito.map((prod) => (
+                <>
+                  <div className='mt-5'>
+                    <h5><strong>Producto:</strong> {prod.description}</h5>
+                    <h5><strong>Precio:</strong> ${prod.price}</h5>
+                    <h5><strong>Cantidad:</strong> {prod.counter}</h5>
+                  </div>
+                </>
+              ))
+            }
+            <hr />
+            <h4><strong>Precio total: ${precioTotal()}</strong></h4>
+        </Col>
+        <Col>
+        <h3>Terminar compra</h3>
+          <hr />
 
       <form onSubmit={handlerSubmit} className='container mt-5 py-3'>
 
@@ -101,11 +122,13 @@ export const Checkout = () => {
           <input type="text" className="form-control" onChange={(e) => setTelefono(e.target.value)} value={telefono} required/>
         </div>
         <Link to='/cart' className='btn btn-outline-info my-3'>Volver al carrito</Link>
-        <button type='submit' className='btn btn-success my-3'>Finalizar compra</button>
+        <button type='submit' className='btn btn-success m-3'>Finalizar compra</button>
 
       </form>
 
-    </div>
-
+        </Col>
+      </Row>
+    </Container>
+    
   )
   }
