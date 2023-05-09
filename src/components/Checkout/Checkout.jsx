@@ -19,19 +19,18 @@ export const Checkout = () => {
   const [apellido, setApellido] = useState("")
   const [telefono, setTelefono] = useState ("")
 
+
+ 
   const handlerSubmit =(e) =>{
     e.preventDefault()
 
-    console.log("Email:", email)
-    console.log("Nombre:", nombre)
-    console.log("Apellido", apellido)
-    console.log ("Teléfono:", telefono)
-    
+
   if(email === emailConfirmar){
 
     const orden = {
     buyer:{
       email,
+      emailConfirmar,
       nombre,
       apellido,
       telefono
@@ -40,6 +39,7 @@ export const Checkout = () => {
     total_price: precioTotal(),
     data: firebase.firestore.Timestamp.fromDate(new Date())
   }
+
     const db = getFirestore()
     const ordenes = db.collection('ordenes')
     ordenes.add(orden)
@@ -106,7 +106,7 @@ export const Checkout = () => {
           <input type="email" className="form-control" onChange={(e) => setEmail(e.target.value)} value={email} required/>
         </div>
         <div className="form-group">
-          <label htmlFor="emailConfirnar">Confirmar Email</label>
+          <label htmlFor="emailConfirmar">Confirmar Email</label>
           <input type="email" className="form-control" onChange={(e) => setEmailConfirmar(e.target.value)} value={emailConfirmar} required/>
         </div>
         <div className="form-group">

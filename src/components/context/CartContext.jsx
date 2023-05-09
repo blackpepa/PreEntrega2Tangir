@@ -1,5 +1,5 @@
 import {createContext, useEffect} from "react";
-import { useState } from 'react';
+import { useState} from 'react';
 
 export const CartContext = createContext()
 const init =JSON.parse(localStorage.getItem('carrito')) ||[]
@@ -33,6 +33,7 @@ export const CartProvider = ({children}) =>{
     const vaciarCarrito =()=>{
         setCarrito([])
     }
+
 
     return(
         <CartContext.Provider value={{addToCart, calcularCantidad, precioTotal, removerItem, carrito, vaciarCarrito}}>
